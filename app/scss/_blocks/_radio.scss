@@ -1,0 +1,64 @@
+.radio {
+  &__label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    &::before {
+      content: "";
+      margin-right: 23px;
+      flex-shrink: 0;
+      height: 40px;
+      width: 40px;
+      border: 2px solid #484848;
+      border-radius: 50%;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background-color: #62d1ba;
+      border-radius: 50%;
+      left: 12px;
+      top: 50%;
+      opacity: 0;
+      transform: translateY(-50%);
+    }
+  }
+}
+.radio__label--toy {
+  margin-top: 10px;
+}
+.radio__control:hover + .radio__label::before {
+  border: 2px solid #62d1ba;
+  transition: 0.3s;
+}
+.radio__control:focus + .radio__label::before {
+  border: 2px solid #62d1ba;
+}
+
+.radio__control:focus + .radio__label::after {
+  opacity: 1;
+}
+.radio__control:checked + .radio__label::after {
+  opacity: 1;
+}
+
+@media (min-width: $tablet-width) {
+  .radio__label::before {
+    width: 52px;
+    height: 52px;
+  }
+  .radio__label::after {
+    width: 21px;
+    height: 21px;
+    left: 15px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .radio__label--toy {
+    margin-top: 24px;
+  }
+}

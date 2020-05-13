@@ -1,0 +1,41 @@
+.copyright {
+  width: 100%;
+  padding-top: 22.5px;
+  padding-bottom: 22.5px;
+  text-align: center;
+
+  &__text {
+    font-size: 19px;
+    line-height: 18px;
+    font-weight: 700;
+    color: #000;
+    padding-right: 30px;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+}
+
+.copyright__icon {
+  vertical-align: middle;
+  fill: #63d1bb;
+}
+
+.copyright__link:active .copyright__icon {
+  opacity: 0.3;
+}
+
+.copyright__link:active .copyright__text {
+  opacity: 0.3;
+}
+
+@media (min-width: $desktop-width) {
+  .copyright {
+    text-align: right;
+  }
+  .copyright__link:hover .copyright__icon {
+    fill: #46c1ae;
+    transition: 0.3s;
+  }
+}

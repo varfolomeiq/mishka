@@ -1,0 +1,86 @@
+.button {
+  display: block;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 700;
+  font-family: "Open Sans", "Arial", sans-serif;
+  border: none;
+  color: $base-color;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 2px solid $base-color;
+  cursor: pointer;
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%;
+
+  &:hover {
+    background-color: $base-color;
+    color: #fff;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+.button--send {
+  margin-bottom: 55px;
+  background-color: #fff;
+}
+
+.reviews__button {
+  margin-top: 125px;
+}
+
+.contacts__button {
+  width: 260px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.size__button {
+  position: relative;
+  z-index: 100;
+  background-color: #63d1bb;
+  color: #fff;
+  border: none;
+  line-height: 16px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+@media (min-width: $tablet-width) {
+  .reviews__button {
+    width: 175px;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    margin-right: 50px;
+    margin-top: 0;
+  }
+
+  .contacts__button {
+    width: 230px;
+  }
+  .characteristic__button {
+    width: 100%;
+  }
+
+  .button--send {
+    width: 230px;
+    margin-right: auto;
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts__button {
+    left: 340px;
+  }
+  .button {
+    transition: 0.3s;
+  }
+}

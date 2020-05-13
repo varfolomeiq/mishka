@@ -1,0 +1,197 @@
+.about {
+  width: 320px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 70px;
+
+  &__title {
+    margin: 0;
+    color: #000;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 700;
+  }
+
+  &__list {
+    @include reset-list;
+  }
+
+  &__item {
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #000;
+    position: relative;
+  }
+}
+
+.about__item--flower {
+  padding-top: 85px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/flower.svg");
+    width: 32px;
+    height: 37px;
+    bottom: 60px;
+    left: 8px;
+  }
+}
+
+.about__item--money {
+  padding-top: 84px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/money.svg");
+    width: 47px;
+    height: 27px;
+    bottom: 70px;
+    left: 0;
+  }
+}
+
+.about__item--heart {
+  padding-top: 83px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/heart.svg");
+    width: 33px;
+    height: 28px;
+    bottom: 65px;
+    left: 6px;
+  }
+}
+
+.about__item--circle {
+  padding-top: 83px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/circle.svg");
+    width: 34px;
+    height: 34px;
+    bottom: 59px;
+    left: 3px;
+  }
+}
+
+.about__item--rocket {
+  padding-top: 83px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/rocket.svg");
+    width: 54px;
+    height: 23px;
+    bottom: 71px;
+    left: -6px;
+  }
+}
+
+.about__item--present {
+  padding-top: 83px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/present.svg");
+    width: 33px;
+    height: 33px;
+    bottom: 62px;
+    left: 3px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .about {
+    width: 768px;
+    margin: 0 auto;
+    padding: 120px 50px 80px;
+
+    &__title {
+      font-size: 43px;
+      line-height: 50px;
+      padding-bottom: 45px;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      padding-top: 55px;
+      width: 50%;
+    }
+
+    .about__item--circle::before,
+    .about__item--flower::before,
+    .about__item--heart::before,
+    .about__item--money::before,
+    .about__item--present::before,
+    .about__item--rocket::before {
+      bottom: 57px;
+    }
+
+    .about__item--flower {
+      order: -1;
+      margin-bottom: 55px;
+    }
+
+    .about__item--circle {
+      order: -1;
+      margin-bottom: 55px;
+    }
+
+    .about__item--money {
+      order: 1;
+      margin-bottom: 55px;
+    }
+
+    .about__item--rocket {
+      order: 1;
+      margin-bottom: 55px;
+    }
+
+    .about__item--heart {
+      order: 2;
+    }
+
+    .about__item--present {
+      order: 3;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about {
+    width: 1150px;
+    padding-top: 160px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    &__title {
+      font-size: 53px;
+      line-height: 57px;
+    }
+
+    &__item {
+      font-size: 20px;
+      line-height: 22px;
+    }
+
+    &__title,
+    &__list {
+      max-width: 700px;
+      margin-left: 175px;
+    }
+  }
+}

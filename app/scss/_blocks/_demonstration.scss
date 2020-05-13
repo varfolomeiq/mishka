@@ -1,0 +1,142 @@
+.demonstration {
+  color: #444444;
+  &__inner {
+    width: 320px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 58px;
+  }
+  &__title {
+    font-size: 17px;
+    color: #000000;
+    margin: 0;
+  }
+  &__icon-video {
+    fill: #63d1bb;
+    order: -1;
+    margin-right: 25px;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    padding: 24px 34px;
+    box-shadow: inset 0 0 0 1px #ececec;
+  }
+  &__video-box {
+    img {
+      display: block;
+    }
+  }
+  &__footer {
+    padding-left: 34px;
+    padding-right: 34px;
+    padding-top: 27px;
+    padding-bottom: 33px;
+    box-shadow: inset 0 0 0 1px #ececec;
+  }
+  &__description {
+    font-size: 13px;
+    margin: 0;
+    margin-bottom: 25px;
+  }
+  &__button {
+    background-color: #fff;
+  }
+}
+.demonstration__video-box {
+  position: relative;
+}
+.demonstration__icon-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+@media (min-width: $tablet-width) {
+  .demonstration {
+    display: flex;
+    width: 768px;
+    padding: 0 50px;
+    padding-bottom: 63px;
+    &__inner {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      box-shadow: inset 0 0 0 1px #ececec;
+      padding: 0;
+    }
+    &__video-box {
+      order: -1;
+    }
+    &__header,
+    &__footer {
+      box-shadow: none;
+    }
+    &__header {
+      padding-bottom: 18px;
+    }
+    &__footer {
+      padding-top: 22px;
+    }
+    &__description {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .demonstration {
+    width: 1150px;
+    position: relative;
+    padding-bottom: 105px;
+    &__title {
+      font-size: 20px;
+    }
+    &__video-box {
+      position: absolute;
+      left: 50px;
+      top: 0;
+    }
+    &__inner {
+      min-height: 455px;
+    }
+    &__header {
+      width: 35.047%;
+      margin-left: auto;
+      padding-top: 47px;
+      padding-left: 79px;
+      padding-right: 141px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__icon-video {
+      margin-right: 0;
+      margin-bottom: 32px;
+    }
+    &__description {
+      font-size: 15px;
+      padding-left: 79px;
+      margin-bottom: 51px;
+    }
+    &__footer {
+      width: 35.047%;
+      margin-left: auto;
+      padding-left: 0;
+    }
+    &__button {
+      width: 230px;
+      margin-left: 80px;
+    }
+  }
+  .demonstration__icon-play:hover {
+    transform: scale(1.2);
+  }
+  .demonstration__icon-play:active {
+    transform: scale(0.8);
+  }
+}

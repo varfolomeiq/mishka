@@ -1,0 +1,13 @@
+@media (min-width:$tablet-width) {
+    .page-header {
+        width: 768px;
+        margin: 0 auto;
+        padding: 0 50px;
+    }
+}
+
+@media (min-width:$desktop-width) {
+    .page-header {
+        width: 1150px;
+    }
+}
